@@ -298,3 +298,17 @@ BigInteger BigInteger::operator/(BigInteger &li) {
 
 }
 
+BigInteger BigInteger::operator%(BigInteger &li) {
+
+    BigInteger resultVar;
+    BigInteger divisionResult;
+    BigInteger midValue;
+
+    divisionResult = *this / li;
+    midValue = divisionResult * li;
+    resultVar = *this - midValue;
+
+    return resultVar;
+
+}
+
