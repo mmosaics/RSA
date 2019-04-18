@@ -27,13 +27,15 @@ private:
 
 public:
     BigInteger();
-    explicit BigInteger(const std::string &valStr);
+    explicit BigInteger(const string &valStr);
 
-    //四则3运算符重载
+
+    //四则运算符重载
     BigInteger operator+( BigInteger &li) ;
     BigInteger operator-( BigInteger &li) ;
     BigInteger operator*( BigInteger &li) ;
     BigInteger operator/( BigInteger &li) ;
+    BigInteger operator%( BigInteger &li) ;
 
     // 比较运算符重载
     bool operator==(const BigInteger &li) ;
@@ -45,6 +47,9 @@ public:
 
     // 字符串格式化输出
     std::string toString();
+
+    //指数运算
+    BigInteger pow(int n) ;
 
 
 

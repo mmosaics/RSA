@@ -6,10 +6,13 @@ using namespace std;
 
 int main() {
 
-    BigInteger test1("123");
-    BigInteger test2("45");
-    BigInteger res = test1*test2;
-    cout<<res.toString();
-
+    BigInteger test1("100");
+    BigInteger test2("25");
+    BigInteger res1 = test1.pow(2);
+    BigInteger res2 = test1 * test2;
+    BigInteger res3 = test1/test2;
+    cout<<res1.toString()<<endl;
+    cout<<res2.toString()<<endl;
+    cout<<res3.toString()<<endl;
     return 0;
 }

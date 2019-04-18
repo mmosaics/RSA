@@ -3,6 +3,7 @@
 //
 
 #include "BigInteger.h"
+#include <cmath>
 #ifndef MIN
 #define MIN(a,b) ((a) > (b) ? (b) : (a))
 #endif
@@ -110,6 +111,19 @@ void BigInteger::trimZero() {
         else
             return;
     }
+}
+
+BigInteger BigInteger::pow(int n) {
+
+    BigInteger resultVar = *this;
+
+    if(n == 0)
+        return BigInteger("1");
+    else {
+        for(int i = 1; i < n; i++)
+            resultVar = resultVar * resultVar;
+    }
+    return resultVar;
 }
 
 
@@ -239,7 +253,6 @@ BigInteger BigInteger::operator*(BigInteger &li) {
 
         resultVar = resultVar.operator+(mulTemp);
 
-        cout<<resultVar.toString()<<endl;
     }
 
     return resultVar;
@@ -248,6 +261,39 @@ BigInteger BigInteger::operator*(BigInteger &li) {
 
 BigInteger BigInteger::operator/(BigInteger &li) {
 
+    int len1 = this->_data.size();
+    int len2 = li._data.size();
+
+    if(*this < li) return BigInteger("0");
+
+    int n = len1-len2;
+
+    int result = 0;
+
+    BigInteger ONE("1");
+    BigInteger TEN("10");
+    BigInteger resultVar("0");
+    BigInteger temp = *this;
+
+    for(int i = n; i>=0; i--) {
+
+        BigInteger TEN("10");
+        BigInteger count("0");
+        BigInteger a = TEN.pow(i);
+        BigInteger midValue = li * a;
+        while (temp > midValue) {
+            temp = temp - midValue;
+            count = count + ONE;
+        }
+
+        BigInteger b = count * a;
+        resultVar = resultVar + b;
+
+    }
+
+    resultVar.trimZero();
+
+    return resultVar;
 
 
 }
