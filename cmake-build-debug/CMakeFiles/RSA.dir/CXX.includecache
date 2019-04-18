@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.cpp
+BigInteger.h
+/Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.h
+
+/Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.h
+iostream
+-
+vector
+-
+string
+-
+map
+-
+
+/Users/jeffrey/CLionProjects/RSA/src/BigNumber/main.cpp
+iostream
+-
+cmath
+-
+BigInteger.h
+/Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.h
+
