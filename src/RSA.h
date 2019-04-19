@@ -18,6 +18,8 @@ private:
     string cipherFilePath;
 
 
+    void generateKeyFile(string filepath, BigInteger para);
+
 public:
 
     static BigInteger repeatMod(BigInteger base, BigInteger n, BigInteger mod);
@@ -27,12 +29,15 @@ public:
     static BigInteger getInverseElement(BigInteger a, BigInteger mod);
     void generatePandQ();
     void initParameter();
-    void generateKey(string filepath, BigInteger para);
-    void outputInfo(string filepath);
-    void encrypt(BigInteger plaintext);
-    void decrypt(BigInteger ciphertext);
+    void generateKey(string filepath);
+    void setPublicKey(string n, string e);
+    void setPrivateKey(string n, string d);
+    string encrypt(string plaintext);
+    string decrypt(string ciphertext);
 
-    void test();
+    string getN();
+    string getE();
+    string getD();
 
 
 

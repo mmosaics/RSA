@@ -6,20 +6,7 @@
 #include "vector"
 #include "fstream"
 
-int getValue(char it) {
-    if(it >= '0' && it <= '9')
-        return it - '0';
-    if(it >= 'A' && it <= 'F')
-        return (it - 'A') + 10;
-}
 
-char getKey(int it) {
-    if(it>= 0 && it <= 9)
-        return it+'0';
-    if(it>=10 && it <= 15)
-        return (it-10) + 'A';
-
-}
 
 BigInteger RSA::repeatMod(BigInteger base, BigInteger n, BigInteger mod) { //6^5mod11
 
@@ -204,12 +191,8 @@ void RSA::initParameter() {
 
 }
 
-void RSA::test() {
-    cout<<"公钥为：(" + e.toString() + "," + n.toString() +")"<<endl;
-    cout<<"私钥为: " + d.toString() <<endl;
-}
 
-void RSA::generateKey(string filepath, BigInteger para) {
+void RSA::generateKeyFile(string filepath, BigInteger para) {
 
     ofstream outFile;
     outFile.open(filepath + para.getName() + ".txt");
@@ -218,13 +201,51 @@ void RSA::generateKey(string filepath, BigInteger para) {
 
 }
 
-void RSA::outputInfo(string filepath) {
+void RSA::generateKey(string filepath) {
 
-    generateKey(filepath,p);
-    generateKey(filepath,q);
-    generateKey(filepath,n);
-    generateKey(filepath,e);
-    generateKey(filepath,d);
+    initParameter();
+
+    generateKeyFile(filepath,p);
+    generateKeyFile(filepath,q);
+    generateKeyFile(filepath,n);
+    generateKeyFile(filepath,e);
+    generateKeyFile(filepath,d);
 
 
+}
+
+void RSA::setPublicKey(string n, string e) {
+    this->n = BigInteger(n);
+    this->e = BigInteger(e);
+}
+
+void RSA::setPrivateKey(string n, string d) {
+    this->d = BigInteger(d);
+    this->n = BigInteger(n);
+}
+
+string RSA::encrypt(string plaintext) {
+    BigInteger cipher;
+    BigInteger plain(plaintext);
+    cipher = repeatMod(plain,e, n);
+    return cipher.toString();
+}
+
+string RSA::decrypt(string ciphertext) {
+    BigInteger plain;
+    BigInteger cipher(ciphertext);
+    plain = repeatMod(cipher, d, n);
+    return plain.toString();
+}
+
+string RSA::getN() {
+    return n.toString();
+}
+
+string RSA::getE() {
+    return e.toString();
+}
+
+string RSA::getD() {
+    return d.toString();
 }
