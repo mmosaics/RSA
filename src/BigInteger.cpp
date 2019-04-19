@@ -120,6 +120,8 @@ int BigInteger::getValue(char it) {
         return it - '0';
     if(it >= 'A' && it <= 'F')
         return (it - 'A') + 10;
+
+    return '0';
 }
 
 char BigInteger::getKey(int it) {
@@ -128,6 +130,7 @@ char BigInteger::getKey(int it) {
     if(it>=10 && it <= 15)
         return (it-10) + 'A';
 
+    return '0';
 }
 
 void BigInteger::trimZero() {
@@ -376,22 +379,7 @@ BigInteger BigInteger::operator%(BigInteger &li) {
 
 }
 
-BigInteger BigInteger::generateBigRand() {
-    BigInteger base1("E5A111A219C64F841669400F51A54DD4E75184004F0F4D21C6AE182CFB528652A02D6D677A72B564C505B1ED42A0C648DBFE14EB66B04C0D60BA3872826C32E7");
-    BigInteger base2("98CB760764484E29245521BE08E7F38EDEEBFCA8427149524BA7F4735E1D5F3A45D585CB3722FF4C07C19165BE738311DC346A914966F5B311416FED3B425079");
-    BigInteger randInt(rand()*rand());
 
-    BigInteger result;
-
-    int choose = rand()%2;
-
-    if(choose == 1)
-        result = base1 + randInt;
-    else
-        result = base2 + randInt;
-
-    return result;
-}
 
 BigInteger BigInteger::generateRangeRand(BigInteger max) {
 

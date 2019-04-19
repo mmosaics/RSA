@@ -53,7 +53,6 @@ public:
     BigInteger pow(BigInteger n);
 
     //随机数
-    static BigInteger generateBigRand() ;
     static BigInteger generateRangeRand(BigInteger max) ;
 
     //进制转换

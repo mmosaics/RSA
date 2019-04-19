@@ -14,10 +14,6 @@ private:
     BigInteger e;
     BigInteger d;
 
-    string plainFilePath;
-    string cipherFilePath;
-
-
     void generateKeyFile(string filepath, BigInteger para);
 
 public:
@@ -38,11 +34,6 @@ public:
     string getN();
     string getE();
     string getD();
-
-
-
-
-
 
 
 };
