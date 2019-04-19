@@ -9,28 +9,17 @@ BigInteger RSA::repeatMod(BigInteger base, BigInteger n, BigInteger mod) { //6^5
 
     BigInteger ZERO("0");
     BigInteger TWO("2");
-    BigInteger a("1");
+    BigInteger ONE("1");
+    BigInteger b("1");
 
-    a = a*base;
-
-    a = a%mod;
-    a = a.pow(n);
-    a = a%mod;
-
-
-    return a;
-
-    /*
-    int FastExp(int a,int k,int m ){
-    int b=1;
-    while(k>=1){
-        if(k%2) b=(a*b)%m;
-        a=(a*a)%m;
-        k/=2;
+    while (n >= ONE) {
+        if(n % TWO > ZERO)
+            b = (base * b) % mod;
+        base = (base * base) % mod;
+        n = n / TWO;
     }
+
     return b;
-    }
-     */
 
 }
 

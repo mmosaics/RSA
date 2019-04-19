@@ -14,17 +14,18 @@ int main() {
     cout<<test2.toString()<<endl;*/
 
 
-    BigInteger test2("23123");
-    BigInteger test1("3479289348ABDE");
+    BigInteger test1("2");
+    BigInteger test2("F4240");
+    BigInteger test3("4D");
 
     BigInteger res;
     BigInteger res2;
-    res = test1%test2;
-    res2 = test1/test2;
-    cout<<res2.toString()<<endl;
+
+    res = RSA::repeatMod(test1,test2,test3);
     cout<<res.toString()<<endl;
 
-    //BigInteger test4("3A9");
+
+    BigInteger test4("7C3");
 
    /* BigInteger test3("B");
 
@@ -46,7 +47,7 @@ int main() {
 
 */
 
-    //cout<<RSA::isProbablePrime(test4,1)<<endl;
+    cout<<RSA::isProbablePrime(test4,1)<<endl;
 
 
     return 0;
