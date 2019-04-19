@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/RSA.dir/src/BigNumber/main.cpp.o"
-  "CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.o"
+  "CMakeFiles/RSA.dir/src/main.cpp.o"
+  "CMakeFiles/RSA.dir/src/BigInteger.cpp.o"
+  "CMakeFiles/RSA.dir/src/RSA.cpp.o"
   "RSA.pdb"
   "RSA"
 )

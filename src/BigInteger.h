@@ -14,6 +14,7 @@ class BigInteger {
 private:
     vector<char> _data;
     string value;
+    string name;
 
 
     int compare(const BigInteger &li);  //比较函数，大于返回1，等于0，小于-1
@@ -55,6 +56,13 @@ public:
     static BigInteger generateBigRand() ;
     static BigInteger generateRangeRand(BigInteger max) ;
 
+    //进制转换
+    BigInteger toBinary(int flag);
+
+    //工具
+    int getFirst();
+    string getName();
+    void setName(string name);
 
 
 

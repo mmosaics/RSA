@@ -57,45 +57,60 @@ include CMakeFiles/RSA.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/RSA.dir/flags.make
 
-CMakeFiles/RSA.dir/src/BigNumber/main.cpp.o: CMakeFiles/RSA.dir/flags.make
-CMakeFiles/RSA.dir/src/BigNumber/main.cpp.o: ../src/BigNumber/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeffrey/CLionProjects/RSA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RSA.dir/src/BigNumber/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RSA.dir/src/BigNumber/main.cpp.o -c /Users/jeffrey/CLionProjects/RSA/src/BigNumber/main.cpp
+CMakeFiles/RSA.dir/src/main.cpp.o: CMakeFiles/RSA.dir/flags.make
+CMakeFiles/RSA.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeffrey/CLionProjects/RSA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RSA.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RSA.dir/src/main.cpp.o -c /Users/jeffrey/CLionProjects/RSA/src/main.cpp
 
-CMakeFiles/RSA.dir/src/BigNumber/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RSA.dir/src/BigNumber/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jeffrey/CLionProjects/RSA/src/BigNumber/main.cpp > CMakeFiles/RSA.dir/src/BigNumber/main.cpp.i
+CMakeFiles/RSA.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RSA.dir/src/main.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jeffrey/CLionProjects/RSA/src/main.cpp > CMakeFiles/RSA.dir/src/main.cpp.i
 
-CMakeFiles/RSA.dir/src/BigNumber/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RSA.dir/src/BigNumber/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jeffrey/CLionProjects/RSA/src/BigNumber/main.cpp -o CMakeFiles/RSA.dir/src/BigNumber/main.cpp.s
+CMakeFiles/RSA.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RSA.dir/src/main.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jeffrey/CLionProjects/RSA/src/main.cpp -o CMakeFiles/RSA.dir/src/main.cpp.s
 
-CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.o: CMakeFiles/RSA.dir/flags.make
-CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.o: ../src/BigNumber/BigInteger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeffrey/CLionProjects/RSA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.o -c /Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.cpp
+CMakeFiles/RSA.dir/src/BigInteger.cpp.o: CMakeFiles/RSA.dir/flags.make
+CMakeFiles/RSA.dir/src/BigInteger.cpp.o: ../src/BigInteger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeffrey/CLionProjects/RSA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RSA.dir/src/BigInteger.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RSA.dir/src/BigInteger.cpp.o -c /Users/jeffrey/CLionProjects/RSA/src/BigInteger.cpp
 
-CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.cpp > CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.i
+CMakeFiles/RSA.dir/src/BigInteger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RSA.dir/src/BigInteger.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jeffrey/CLionProjects/RSA/src/BigInteger.cpp > CMakeFiles/RSA.dir/src/BigInteger.cpp.i
 
-CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.cpp -o CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.s
+CMakeFiles/RSA.dir/src/BigInteger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RSA.dir/src/BigInteger.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jeffrey/CLionProjects/RSA/src/BigInteger.cpp -o CMakeFiles/RSA.dir/src/BigInteger.cpp.s
+
+CMakeFiles/RSA.dir/src/RSA.cpp.o: CMakeFiles/RSA.dir/flags.make
+CMakeFiles/RSA.dir/src/RSA.cpp.o: ../src/RSA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jeffrey/CLionProjects/RSA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RSA.dir/src/RSA.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RSA.dir/src/RSA.cpp.o -c /Users/jeffrey/CLionProjects/RSA/src/RSA.cpp
+
+CMakeFiles/RSA.dir/src/RSA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RSA.dir/src/RSA.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jeffrey/CLionProjects/RSA/src/RSA.cpp > CMakeFiles/RSA.dir/src/RSA.cpp.i
+
+CMakeFiles/RSA.dir/src/RSA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RSA.dir/src/RSA.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jeffrey/CLionProjects/RSA/src/RSA.cpp -o CMakeFiles/RSA.dir/src/RSA.cpp.s
 
 # Object files for target RSA
 RSA_OBJECTS = \
-"CMakeFiles/RSA.dir/src/BigNumber/main.cpp.o" \
-"CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.o"
+"CMakeFiles/RSA.dir/src/main.cpp.o" \
+"CMakeFiles/RSA.dir/src/BigInteger.cpp.o" \
+"CMakeFiles/RSA.dir/src/RSA.cpp.o"
 
 # External object files for target RSA
 RSA_EXTERNAL_OBJECTS =
 
-RSA: CMakeFiles/RSA.dir/src/BigNumber/main.cpp.o
-RSA: CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.o
+RSA: CMakeFiles/RSA.dir/src/main.cpp.o
+RSA: CMakeFiles/RSA.dir/src/BigInteger.cpp.o
+RSA: CMakeFiles/RSA.dir/src/RSA.cpp.o
 RSA: CMakeFiles/RSA.dir/build.make
 RSA: CMakeFiles/RSA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jeffrey/CLionProjects/RSA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable RSA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jeffrey/CLionProjects/RSA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable RSA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RSA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

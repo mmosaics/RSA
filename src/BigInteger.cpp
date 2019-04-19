@@ -154,9 +154,11 @@ BigInteger BigInteger::pow(int n) {
 
 BigInteger BigInteger::pow(BigInteger n) {
 
+    BigInteger origin = *this;
     BigInteger resultVar = *this;
     BigInteger ZERO("0");
     BigInteger ONE("1");
+    BigInteger binaryOrigin = n.toBinary(1);
 
     if(*this == ZERO)
         return ZERO;
@@ -164,8 +166,15 @@ BigInteger BigInteger::pow(BigInteger n) {
     if(n == ZERO)
         return BigInteger("1");
     else {
-        for(BigInteger i("1"); i < n; i = i + ONE)
-            resultVar = resultVar * (*this);
+        for(int i = binaryOrigin._data.size() - 2; i >= 0 ; i--) {
+            if(binaryOrigin._data[i] == '1') {
+                resultVar = resultVar*resultVar;
+                resultVar = resultVar * origin;
+            } else {
+                resultVar = resultVar*resultVar;
+            }
+        }
+
     }
 
     return resultVar;
@@ -325,9 +334,9 @@ BigInteger BigInteger::operator/(BigInteger &li) {
 
         BigInteger count("0");
         BigInteger a = TEN.pow(i);
-        //BigInteger anoLi = li;
-        //anoLi.pushZero(i);
-        BigInteger midValue = li * a;
+        BigInteger anoLi = li;
+        anoLi.pushZero(i);
+        BigInteger midValue = anoLi;
         //cout<<"hello"<<endl;
         while (temp >= midValue) {
             temp = temp - midValue;
@@ -352,6 +361,9 @@ BigInteger BigInteger::operator%(BigInteger &li) {
     BigInteger divisionResult;
     BigInteger midValue;
     BigInteger a;
+
+    if(*this == li)
+        return BigInteger("0");
 
     a = *this;
 
@@ -401,5 +413,134 @@ BigInteger BigInteger::generateRangeRand(BigInteger max) {
     return randNum;
 
 }
+
+BigInteger BigInteger::toBinary(int flag) {
+
+    BigInteger result;
+
+    BigInteger current = *this;
+
+    for(int i = 0; i < current._data.size(); i++) {
+        switch (current._data[i]) {
+            case '0':
+                result._data.push_back('0');
+                result._data.push_back('0');
+                result._data.push_back('0');
+                result._data.push_back('0');
+                break;
+            case '1':
+                result._data.push_back('1');
+                result._data.push_back('0');
+                result._data.push_back('0');
+                result._data.push_back('0');
+                break;
+            case '2':
+                result._data.push_back('0');
+                result._data.push_back('1');
+                result._data.push_back('0');
+                result._data.push_back('0');
+                break;
+            case '3':
+                result._data.push_back('1');
+                result._data.push_back('1');
+                result._data.push_back('0');
+                result._data.push_back('0');
+                break;
+            case '4':
+                result._data.push_back('0');
+                result._data.push_back('0');
+                result._data.push_back('1');
+                result._data.push_back('0');
+                break;
+            case '5':
+                result._data.push_back('1');
+                result._data.push_back('0');
+                result._data.push_back('1');
+                result._data.push_back('0');
+                break;
+            case '6':
+                result._data.push_back('0');
+                result._data.push_back('1');
+                result._data.push_back('1');
+                result._data.push_back('0');
+                break;
+            case '7':
+                result._data.push_back('1');
+                result._data.push_back('1');
+                result._data.push_back('1');
+                result._data.push_back('0');
+                break;
+            case '8':
+                result._data.push_back('0');
+                result._data.push_back('0');
+                result._data.push_back('0');
+                result._data.push_back('1');
+                break;
+            case '9':
+                result._data.push_back('1');
+                result._data.push_back('0');
+                result._data.push_back('0');
+                result._data.push_back('1');
+                break;
+            case 'A':
+                result._data.push_back('0');
+                result._data.push_back('1');
+                result._data.push_back('0');
+                result._data.push_back('1');
+                break;
+            case 'B':
+                result._data.push_back('1');
+                result._data.push_back('1');
+                result._data.push_back('0');
+                result._data.push_back('1');
+                break;
+            case 'C':
+                result._data.push_back('0');
+                result._data.push_back('0');
+                result._data.push_back('1');
+                result._data.push_back('1');
+                break;
+            case 'D':
+                result._data.push_back('1');
+                result._data.push_back('0');
+                result._data.push_back('1');
+                result._data.push_back('1');
+                break;
+            case 'E':
+                result._data.push_back('0');
+                result._data.push_back('1');
+                result._data.push_back('1');
+                result._data.push_back('1');
+                break;
+            case 'F':
+                result._data.push_back('1');
+                result._data.push_back('1');
+                result._data.push_back('1');
+                result._data.push_back('1');
+                break;
+        }
+
+    }
+
+    if(flag == 1) {
+        result.trimZero();
+        return result;
+    } else
+        return result;
+
+}
+
+int BigInteger::getFirst() {
+    return getValue(_data[0]);
+}
+
+string BigInteger::getName() {
+    return name;
+}
+
+void BigInteger::setName(string name) {
+    this->name = name;
+}
+
 
 

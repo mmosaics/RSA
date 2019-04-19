@@ -80,13 +80,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.cpp">
+		<Unit filename="/Users/jeffrey/CLionProjects/RSA/src/BigInteger.cpp">
 			<Option target="RSA"/>
 		</Unit>
-		<Unit filename="/Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.h">
+		<Unit filename="/Users/jeffrey/CLionProjects/RSA/src/BigInteger.h">
 			<Option target="RSA"/>
 		</Unit>
-		<Unit filename="/Users/jeffrey/CLionProjects/RSA/src/BigNumber/main.cpp">
+		<Unit filename="/Users/jeffrey/CLionProjects/RSA/src/RSA.cpp">
+			<Option target="RSA"/>
+		</Unit>
+		<Unit filename="/Users/jeffrey/CLionProjects/RSA/src/RSA.h">
+			<Option target="RSA"/>
+		</Unit>
+		<Unit filename="/Users/jeffrey/CLionProjects/RSA/src/main.cpp">
 			<Option target="RSA"/>
 		</Unit>
 		<Unit filename="/Users/jeffrey/CLionProjects/RSA/CMakeLists.txt">

@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.cpp
-BigInteger.h
-/Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.h
-
-/Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.h
+/Users/jeffrey/CLionProjects/RSA/src/BigInteger.h
 iostream
 -
 vector
@@ -20,11 +16,15 @@ string
 map
 -
 
-/Users/jeffrey/CLionProjects/RSA/src/BigNumber/main.cpp
-iostream
--
-cmath
--
+/Users/jeffrey/CLionProjects/RSA/src/RSA.cpp
+RSA.h
+/Users/jeffrey/CLionProjects/RSA/src/RSA.h
+vector
+/Users/jeffrey/CLionProjects/RSA/src/vector
+fstream
+/Users/jeffrey/CLionProjects/RSA/src/fstream
+
+/Users/jeffrey/CLionProjects/RSA/src/RSA.h
 BigInteger.h
-/Users/jeffrey/CLionProjects/RSA/src/BigNumber/BigInteger.h
+/Users/jeffrey/CLionProjects/RSA/src/BigInteger.h
 

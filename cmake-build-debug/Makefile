@@ -123,59 +123,86 @@ RSA/fast:
 	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/build
 .PHONY : RSA/fast
 
-src/BigNumber/BigInteger.o: src/BigNumber/BigInteger.cpp.o
+src/BigInteger.o: src/BigInteger.cpp.o
 
-.PHONY : src/BigNumber/BigInteger.o
-
-# target to build an object file
-src/BigNumber/BigInteger.cpp.o:
-	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.o
-.PHONY : src/BigNumber/BigInteger.cpp.o
-
-src/BigNumber/BigInteger.i: src/BigNumber/BigInteger.cpp.i
-
-.PHONY : src/BigNumber/BigInteger.i
-
-# target to preprocess a source file
-src/BigNumber/BigInteger.cpp.i:
-	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.i
-.PHONY : src/BigNumber/BigInteger.cpp.i
-
-src/BigNumber/BigInteger.s: src/BigNumber/BigInteger.cpp.s
-
-.PHONY : src/BigNumber/BigInteger.s
-
-# target to generate assembly for a file
-src/BigNumber/BigInteger.cpp.s:
-	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/BigNumber/BigInteger.cpp.s
-.PHONY : src/BigNumber/BigInteger.cpp.s
-
-src/BigNumber/main.o: src/BigNumber/main.cpp.o
-
-.PHONY : src/BigNumber/main.o
+.PHONY : src/BigInteger.o
 
 # target to build an object file
-src/BigNumber/main.cpp.o:
-	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/BigNumber/main.cpp.o
-.PHONY : src/BigNumber/main.cpp.o
+src/BigInteger.cpp.o:
+	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/BigInteger.cpp.o
+.PHONY : src/BigInteger.cpp.o
 
-src/BigNumber/main.i: src/BigNumber/main.cpp.i
+src/BigInteger.i: src/BigInteger.cpp.i
 
-.PHONY : src/BigNumber/main.i
+.PHONY : src/BigInteger.i
 
 # target to preprocess a source file
-src/BigNumber/main.cpp.i:
-	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/BigNumber/main.cpp.i
-.PHONY : src/BigNumber/main.cpp.i
+src/BigInteger.cpp.i:
+	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/BigInteger.cpp.i
+.PHONY : src/BigInteger.cpp.i
 
-src/BigNumber/main.s: src/BigNumber/main.cpp.s
+src/BigInteger.s: src/BigInteger.cpp.s
 
-.PHONY : src/BigNumber/main.s
+.PHONY : src/BigInteger.s
 
 # target to generate assembly for a file
-src/BigNumber/main.cpp.s:
-	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/BigNumber/main.cpp.s
-.PHONY : src/BigNumber/main.cpp.s
+src/BigInteger.cpp.s:
+	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/BigInteger.cpp.s
+.PHONY : src/BigInteger.cpp.s
+
+src/RSA.o: src/RSA.cpp.o
+
+.PHONY : src/RSA.o
+
+# target to build an object file
+src/RSA.cpp.o:
+	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/RSA.cpp.o
+.PHONY : src/RSA.cpp.o
+
+src/RSA.i: src/RSA.cpp.i
+
+.PHONY : src/RSA.i
+
+# target to preprocess a source file
+src/RSA.cpp.i:
+	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/RSA.cpp.i
+.PHONY : src/RSA.cpp.i
+
+src/RSA.s: src/RSA.cpp.s
+
+.PHONY : src/RSA.s
+
+# target to generate assembly for a file
+src/RSA.cpp.s:
+	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/RSA.cpp.s
+.PHONY : src/RSA.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/RSA.dir/build.make CMakeFiles/RSA.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -186,12 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... RSA"
-	@echo "... src/BigNumber/BigInteger.o"
-	@echo "... src/BigNumber/BigInteger.i"
-	@echo "... src/BigNumber/BigInteger.s"
-	@echo "... src/BigNumber/main.o"
-	@echo "... src/BigNumber/main.i"
-	@echo "... src/BigNumber/main.s"
+	@echo "... src/BigInteger.o"
+	@echo "... src/BigInteger.i"
+	@echo "... src/BigInteger.s"
+	@echo "... src/RSA.o"
+	@echo "... src/RSA.i"
+	@echo "... src/RSA.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

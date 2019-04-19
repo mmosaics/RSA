@@ -14,12 +14,25 @@ private:
     BigInteger e;
     BigInteger d;
 
+    string plainFilePath;
+    string cipherFilePath;
 
 
 public:
 
     static BigInteger repeatMod(BigInteger base, BigInteger n, BigInteger mod);
     static bool isProbablePrime(BigInteger n, int trial);
+    static BigInteger generatePrime(BigInteger min);
+    static BigInteger gcd(BigInteger a, BigInteger b);
+    static BigInteger getInverseElement(BigInteger a, BigInteger mod);
+    void generatePandQ();
+    void initParameter();
+    void generateKey(string filepath, BigInteger para);
+    void outputInfo(string filepath);
+    void encrypt(BigInteger plaintext);
+    void decrypt(BigInteger ciphertext);
+
+    void test();
 
 
 
