@@ -4,6 +4,7 @@
 
 #include "BigInteger.h"
 #include <cmath>
+#include <stdlib.h>
 #ifndef MIN
 #define MIN(a,b) ((a) > (b) ? (b) : (a))
 #endif
@@ -16,11 +17,28 @@
 
 inline bool isDigit(const char ch)
 {
-     return (ch >= '0' && ch <= '9') || (ch >= 'A' && ch <= 'E') ;
+     return (ch >= '0' && ch <= '9') || (ch >= 'A' && ch <= 'F') ;
 }
 
 
 BigInteger::BigInteger() {}
+
+BigInteger::BigInteger(const int val) {
+    int quantity = 0;
+    int temp = val;
+    while(temp != 0) {
+        temp = temp/10;
+        quantity++;
+    }
+
+    temp = val;
+
+    for(int i = 0; i < quantity; i++) {
+        int a = temp%10;
+        temp = temp/10;
+        _data.push_back(getKey(a));
+    }
+}
 
 BigInteger::BigInteger(const std::string &valStr) {
 
@@ -49,6 +67,12 @@ std::string BigInteger::toString() {
     return value;
 }
 
+void BigInteger::pushZero(int i) {
+    for(int j= 0; j < i; j++ )
+    _data.insert(_data.begin(),'0');
+
+}
+
 
 int BigInteger::compare(const BigInteger &li) {
     int len1 = this->_data.size();
@@ -61,6 +85,8 @@ int BigInteger::compare(const BigInteger &li) {
         if(getValue(this->_data[i]) == getValue(li._data[i])) continue;
         return (getValue(this->_data[i])>getValue(li._data[i]))?1:-1;
     }
+
+    return 0;
 
 }
 
@@ -121,9 +147,29 @@ BigInteger BigInteger::pow(int n) {
         return BigInteger("1");
     else {
         for(int i = 1; i < n; i++)
-            resultVar = resultVar * resultVar;
+            resultVar = resultVar * (*this);
     }
     return resultVar;
+}
+
+BigInteger BigInteger::pow(BigInteger n) {
+
+    BigInteger resultVar = *this;
+    BigInteger ZERO("0");
+    BigInteger ONE("1");
+
+    if(*this == ZERO)
+        return ZERO;
+
+    if(n == ZERO)
+        return BigInteger("1");
+    else {
+        for(BigInteger i("1"); i < n; i = i + ONE)
+            resultVar = resultVar * (*this);
+    }
+
+    return resultVar;
+
 }
 
 
@@ -270,18 +316,20 @@ BigInteger BigInteger::operator/(BigInteger &li) {
 
     int result = 0;
 
-    BigInteger ONE("1");
-    BigInteger TEN("10");
+    static BigInteger ONE("1");
+    static BigInteger TEN("10");
     BigInteger resultVar("0");
     BigInteger temp = *this;
 
     for(int i = n; i>=0; i--) {
 
-        BigInteger TEN("10");
         BigInteger count("0");
         BigInteger a = TEN.pow(i);
+        //BigInteger anoLi = li;
+        //anoLi.pushZero(i);
         BigInteger midValue = li * a;
-        while (temp > midValue) {
+        //cout<<"hello"<<endl;
+        while (temp >= midValue) {
             temp = temp - midValue;
             count = count + ONE;
         }
@@ -303,12 +351,55 @@ BigInteger BigInteger::operator%(BigInteger &li) {
     BigInteger resultVar;
     BigInteger divisionResult;
     BigInteger midValue;
+    BigInteger a;
 
-    divisionResult = *this / li;
+    a = *this;
+
+    divisionResult = a / li;
     midValue = divisionResult * li;
-    resultVar = *this - midValue;
+    midValue.trimZero();
+    resultVar = a - midValue;
 
     return resultVar;
 
 }
+
+BigInteger BigInteger::generateBigRand() {
+    BigInteger base1("E5A111A219C64F841669400F51A54DD4E75184004F0F4D21C6AE182CFB528652A02D6D677A72B564C505B1ED42A0C648DBFE14EB66B04C0D60BA3872826C32E7");
+    BigInteger base2("98CB760764484E29245521BE08E7F38EDEEBFCA8427149524BA7F4735E1D5F3A45D585CB3722FF4C07C19165BE738311DC346A914966F5B311416FED3B425079");
+    BigInteger randInt(rand()*rand());
+
+    BigInteger result;
+
+    int choose = rand()%2;
+
+    if(choose == 1)
+        result = base1 + randInt;
+    else
+        result = base2 + randInt;
+
+    return result;
+}
+
+BigInteger BigInteger::generateRangeRand(BigInteger max) {
+
+    BigInteger TWO("2");
+    BigInteger INTMAX(INT32_MAX);
+    BigInteger randNum;
+
+    if(max < BigInteger(INT32_MAX)) {
+        randNum = BigInteger(rand()) % max;
+        while (randNum < 2)
+            randNum = BigInteger(rand()) % max;
+
+    } else {
+        randNum = BigInteger(rand()) % INTMAX;
+        while (randNum < 2)
+            randNum = BigInteger(rand()) % INTMAX;
+    }
+
+    return randNum;
+
+}
+
 
